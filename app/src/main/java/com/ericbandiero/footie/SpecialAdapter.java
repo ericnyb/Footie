@@ -14,11 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * We updated this after updating another change in experimental branch.
- * This is our own adapter.
- * We use this in our list.
- * Change made in experimental branch.
- * Created by Eric on 3/30/2015.
+  * This is our own adapter.
+  * We use this in our list.
+  * Created by Eric on 3/30/2015.
  */
 public class SpecialAdapter extends ArrayAdapter {
 
