@@ -44,6 +44,7 @@ import java.util.concurrent.Executors;
 /**
  * Eric Bandiero
  * Change 1
+ * Change 2
  */
 public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
     private XmlPullParserFactory xmlFactoryObject;
