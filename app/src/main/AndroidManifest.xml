@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ericbandiero.footie"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ericbandiero.footie.MainActivity" />
+        </activity>
+        <activity
+            android:name=".rss.RSSAsychActivity"
+            android:label="@string/title_activity_asych"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ericbandiero.footie.MainActivity" />
+        </activity>
+        <activity
+            android:name=".rss.AussieActivity"
+            android:label="@string/title_activity_aussie"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ericbandiero.footie.MainActivity" />
+        </activity>
+        <activity
+            android:name=".rss.US_NewsActivity"
+            android:label="@string/title_activity_us__news"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ericbandiero.footie.MainActivity" />
+        </activity>
+        <activity
+            android:name=".rss.NY_News_Activity"
+            android:label="@string/title_activity_ny__news_"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ericbandiero.footie.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
