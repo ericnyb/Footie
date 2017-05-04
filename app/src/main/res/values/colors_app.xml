@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="APP_COLOR_ESPN">@color/Yellow</color>
+    <color name="APP_COLOR_ESPN_MLS">@color/LightGreen</color>
+    <color name="APP_COLOR_FIFA">@color/LightSalmon</color>
+    <color name="APP_COLOR_365">@color/LightSkyBlue</color>
+
+</resources>

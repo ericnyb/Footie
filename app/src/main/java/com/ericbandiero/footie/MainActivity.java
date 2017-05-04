@@ -23,7 +23,6 @@ import android.widget.Toast;
 import com.ericbandiero.footie.rss.AussieActivity;
 import com.ericbandiero.footie.rss.NY_News_Activity;
 import com.ericbandiero.footie.rss.RSSAsychActivity;
-import com.ericbandiero.footie.rss.US_NewsActivity;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -37,7 +36,6 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -197,7 +195,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 intent = new Intent(this, AussieActivity.class);
                 break;
             case R.id.action_us_news:
-                intent = new Intent(this, US_NewsActivity.class);
+                intent = new Intent(this, RssMainActivity2.class);
                 break;
 
             case R.id.action_ny_news:

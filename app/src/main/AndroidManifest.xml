@@ -62,9 +62,13 @@
                 android:value="com.ericbandiero.footie.MainActivity"/>
         </activity>
         <activity
-            android:name=".RssMainActivity"
+            android:name=".RssMainActivity2"
             android:label="@string/title_activity_rss_main"
-            android:theme="@style/NoActionBar">
+            android:theme="@style/NoActionBar"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ericbandiero.footie.MainActivity"/>
         </activity>
     </application>
 

@@ -12,13 +12,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.Spannable;
-import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.TextWatcher;
-import android.text.style.AbsoluteSizeSpan;
 import android.text.style.BackgroundColorSpan;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -60,7 +56,7 @@ public class RSSAsychActivity extends ActionBarActivity implements AdapterView.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rss_asych);
+        setContentView(R.layout.activity_rss_asych_local);
         if (AppConfig.DEBUG)
             Log.v(this.getClass().getSimpleName() + ">", "Version:" + Build.VERSION.RELEASE);
         if (AppConfig.DEBUG)
