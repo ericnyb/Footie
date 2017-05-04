@@ -63,9 +63,9 @@ public class RssMainActivity2 extends RSSAsynchActivity{
 				prefFilterKeyNameRssSuffix = "local";
 				//list_sources.add(new SourceRSS("http://www.football365.com/premier-league/rss", "Football 365", ContextCompat.getColor(context, R.color.APP_COLOR_365), null, defaultDaysBackToGo, "http://www.nydailynews.com"));
 				//list_sources.add(new SourceRSS("http://www.fifa.com/rss/index.xml", "FIFA", ContextCompat.getColor(context, R.color.APP_COLOR_FIFA), null, defaultDaysBackToGo, "http://nypost.com"));
-				list_sources.add(new SourceRSS("http://www.fifa.com/news/popular/rss.xml", "FIFA News", ContextCompat.getColor(context, R.color.APP_COLOR_FIFA), null, defaultDaysBackToGo, "http://www.fifa.com"));
-			//	list_sources.add(new SourceRSS("http://www.espnfc.com/rss", "Soccer News", ContextCompat.getColor(context, R.color.APP_COLOR_ESPN), null, defaultDaysBackToGo, "http://www.espnfc.us/"));
-			//	list_sources.add(new SourceRSS("http://www.espnfc.com/major-league-soccer/19/rss", "ESPN MSL", ContextCompat.getColor(context, R.color.APP_COLOR_ESPN_MLS), null, defaultDaysBackToGo, "http://www.espnfc.us/major-league-soccer/19/index"));
+				list_sources.add(new SourceRSS("http://feeds.feedburner.com/soccernewsfeed", "Soccer news", ContextCompat.getColor(context, R.color.APP_COLOR_FIFA), null, defaultDaysBackToGo, "http://www.soccernews.com"));
+				list_sources.add(new SourceRSS("http://www.espnfc.com/rss", "ESPN Soccer", ContextCompat.getColor(context, R.color.APP_COLOR_ESPN), null, defaultDaysBackToGo, "http://www.espnfc.us/"));
+				list_sources.add(new SourceRSS("http://www.espnfc.com/major-league-soccer/19/rss", "ESPN MSL", ContextCompat.getColor(context, R.color.APP_COLOR_ESPN_MLS), null, defaultDaysBackToGo, "http://www.espnfc.us/major-league-soccer/19/index"));
 				break;
 		}
 	}
