@@ -1,5 +1,6 @@
 package com.ericbandiero.footie.rss;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.content.ContextCompat;
@@ -9,6 +10,7 @@ import android.view.MenuItem;
 import com.ericbandiero.footie.AppConstant;
 import com.ericbandiero.footie.R;
 import com.ericbandiero.librarymain.UtilsShared;
+import com.ericbandiero.librarymain.interfaces.IReturnDialogInt;
 import com.ericbandiero.rssreader.SourceRSS;
 import com.ericbandiero.rssreader.activity.RSSAsynchActivity;
 
@@ -40,6 +42,15 @@ public class MainFootieActivity extends RSSAsynchActivity {
 	@Override
 	public void onBackPressed() {
 		if (AppConstant.DEBUG) Log.d(this.getClass().getSimpleName()+">","Back pressed!");
+		UtilsShared.AlertMessageSimpleYesNo(this, "Confirm Exit App", "Do you want to exit the app?", new IReturnDialogInt() {
+			@Override
+			public void execute(int i) {
+				if (i== AlertDialog.BUTTON_POSITIVE){
+					if (AppConstant.DEBUG) Log.d(this.getClass().getSimpleName()+">","Yup!");
+					finish();
+				}
+			}
+		});
 //		Intent intent = new Intent(Intent.ACTION_MAIN);
 //		intent.addCategory(Intent.CATEGORY_HOME);
 //		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
