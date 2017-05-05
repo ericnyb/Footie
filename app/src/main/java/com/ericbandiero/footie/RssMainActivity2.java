@@ -17,7 +17,7 @@ public class RssMainActivity2 extends RSSAsynchActivity{
 	protected void onCreate(Bundle savedInstanceState) {
 		if (AppConstant.DEBUG) Log.d(this.getClass().getSimpleName()+">","Here!");
 		super.onCreate(savedInstanceState);
-
+		//We need to commit this so it doesn't show in other branch.
 		setContentView(R.layout.activity_rss_main);
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
