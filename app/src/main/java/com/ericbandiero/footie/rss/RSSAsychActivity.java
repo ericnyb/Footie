@@ -26,7 +26,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.ericbandiero.footie.AppConfig;
+import com.ericbandiero.footie.AppConstant;
 import com.ericbandiero.footie.R;
 
 import java.util.ArrayList;
@@ -57,13 +57,13 @@ public class RSSAsychActivity extends ActionBarActivity implements AdapterView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rss_asych_local);
-        if (AppConfig.DEBUG)
+        if (AppConstant.DEBUG)
             Log.v(this.getClass().getSimpleName() + ">", "Version:" + Build.VERSION.RELEASE);
-        if (AppConfig.DEBUG)
+        if (AppConstant.DEBUG)
             Log.v(this.getClass().getSimpleName() + ">", "Version:" + Build.VERSION.SDK_INT);
         textview = (TextView) findViewById(R.id.textView1);
         textview.requestFocus();
-        if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Set content");
+        if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Set content");
         mRssListView = (ListView) findViewById(R.id.rss_list_view);
         mRssFeedList = new ArrayList<RSSFeed>();
         Spannable wordtoSpan;
@@ -77,7 +77,7 @@ public class RSSAsychActivity extends ActionBarActivity implements AdapterView.O
 
 
         for (String source : mapUrls.keySet()) {
-            if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Source:" + source);
+            if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Source:" + source);
             new DoRssFeedTask().execute(source);
         }
 
@@ -133,7 +133,7 @@ public class RSSAsychActivity extends ActionBarActivity implements AdapterView.O
             endPosition = endPosition + source.length();
             sb.setSpan(new BackgroundColorSpan(mapUrls.get(source)), startPosition, endPosition, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             startPosition = endPosition++;
-            if (AppConfig.DEBUG)
+            if (AppConstant.DEBUG)
                 Log.v(this.getClass().getSimpleName() + ">", "Value:" + mapUrls.get(source).toString());
         }
 
@@ -176,10 +176,10 @@ public class RSSAsychActivity extends ActionBarActivity implements AdapterView.O
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Click!");
-        if (AppConfig.DEBUG)
+        if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Click!");
+        if (AppConstant.DEBUG)
             Log.v(this.getClass().getSimpleName() + ">", mRssAllFeedList.get(position).toString());
-        if (AppConfig.DEBUG)
+        if (AppConstant.DEBUG)
             Log.v(this.getClass().getSimpleName() + ">", mRssAllFeedList.get(position).getLink());
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(mRssAllFeedList.get(position).getLink()));
         startActivity(browserIntent);
@@ -221,7 +221,7 @@ public class RSSAsychActivity extends ActionBarActivity implements AdapterView.O
                 view.setTag(rssHolder);
             } else {
                 rssHolder = (RssHolder) view.getTag();
-                if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Ru-using view");
+                if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Ru-using view");
             }
             RSSFeed rssFeed = rssFeedLst.get(position);
             rssHolder.rssTitleView.setText(rssFeed.getTitle());
@@ -232,7 +232,7 @@ public class RSSAsychActivity extends ActionBarActivity implements AdapterView.O
 
         public void filter(String charText) {
             charText = charText.toLowerCase(Locale.getDefault());
-            if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "In Filter");
+            if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "In Filter");
             rssFeedLst.clear();
             if (charText.length() == 0) {
                 rssFeedLst.addAll(arraylist);
@@ -266,7 +266,7 @@ public class RSSAsychActivity extends ActionBarActivity implements AdapterView.O
 
         @Override
         protected List<RSSFeed> doInBackground(String... params) {
-        if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName()+">","Running");
+        if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName()+">","Running");
             for (String urlVal : params) {
                 mNewsFeeder = new NewsFeedParser(urlVal, days_old);
 
@@ -292,9 +292,9 @@ public class RSSAsychActivity extends ActionBarActivity implements AdapterView.O
                     }
                 }
             });
-            if (AppConfig.DEBUG)
+            if (AppConstant.DEBUG)
                 Log.i(this.getClass().getSimpleName() + ">", "Items from current source:" + mRssFeedList.size());
-            if (AppConfig.DEBUG)
+            if (AppConstant.DEBUG)
                 Log.i(this.getClass().getSimpleName() + ">", "Total items:" + mRssAllFeedList.size());
 
 

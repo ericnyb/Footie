@@ -2,7 +2,6 @@ package com.ericbandiero.footie;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,7 +54,7 @@ public class SpecialAdapter extends ArrayAdapter {
 
             row.setTag(holder);
         } else {
-            if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Re-using holder");
+            if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Re-using holder");
             holder = (RssHolder) row.getTag();
         }
 

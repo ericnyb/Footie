@@ -7,7 +7,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
@@ -109,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             endPosition = endPosition + source.length();
             sb.setSpan(new BackgroundColorSpan(mapUrls.get(source)), startPosition, endPosition, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             startPosition = endPosition++;
-            if (AppConfig.DEBUG)
+            if (AppConstant.DEBUG)
                 Log.v(this.getClass().getSimpleName() + ">", "Value:" + mapUrls.get(source).toString());
         }
 
@@ -123,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             if (networkInfo != null && networkInfo.isConnected()) {
 
                 for (String list_site : list_sites) {
-                    if (AppConfig.DEBUG) Log.i(this.getClass().getSimpleName() + ">", "Starting:" + list_site);
+                    if (AppConstant.DEBUG) Log.i(this.getClass().getSimpleName() + ">", "Starting:" + list_site);
                     sources = sources + LINE_SEPARATOR + list_site;
                     readNews(list_site);
                     try {
@@ -144,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
 
 
-        if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Length----------------------------;" + list_RssData.size());
+        if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Length----------------------------;" + list_RssData.size());
 
         final ListView listview = (ListView) findViewById(R.id.listView);
         listview.setOnItemClickListener(this);
@@ -160,7 +159,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         textheader.setText("Soccer news from around the globe." + LINE_SEPARATOR + "Please respect copyright information!");
        // textheader2.setText(sources);
 
-        if (AppConfig.DEBUG)  Log.v(this.getClass().getSimpleName() + ">", "Size:" + list_headers.size());
+        if (AppConstant.DEBUG)  Log.v(this.getClass().getSimpleName() + ">", "Size:" + list_headers.size());
 
     }
 
@@ -212,7 +211,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             startActivity(intent);
         }
 
-        if (AppConfig.DEBUG) Log.i(this.getLocalClassName() + ">", "id:" + item.getTitle());
+        if (AppConstant.DEBUG) Log.i(this.getLocalClassName() + ">", "id:" + item.getTitle());
         //   Log.i(this.getLocalClassName() + ">", "id:" +);
 
 
@@ -231,7 +230,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Thread threadToRun = new Thread(new Runnable() {
             @Override
             public void run() {
-                if (AppConfig.DEBUG)
+                if (AppConstant.DEBUG)
                     Log.v(this.getClass().getSimpleName() + ">", "Count:" + Thread.activeCount());
 
                 try {
@@ -287,33 +286,33 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         break;
                     case XmlPullParser.TEXT:
                         text = myParser.getText();
-//          if (AppConfig.DEBUG)              Log.v(this.getClass().getSimpleName()+">",text.toString());
+//          if (AppConstant.DEBUG)              Log.v(this.getClass().getSimpleName()+">",text.toString());
                         break;
                     case XmlPullParser.END_TAG:
-                        // if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Type:" + name);
+                        // if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Type:" + name);
                         switch (name) {
                             case "title":
-                                //  if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Title:" + text);
+                                //  if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Title:" + text);
                                 title = text;
 
                                 break;
                             case "generator":
-                                // if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Title:" + text);
+                                // if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Title:" + text);
                                 title = text;
 
                                 break;
                             case "description":
-                                //if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Desc:" + text);
+                                //if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Desc:" + text);
 
                                 desc = text;
 
                                 break;
                             case "link":
-                                // if (AppConfig.DEBUG)    Log.v(this.getClass().getSimpleName() + ">", "Link:" + text);
+                                // if (AppConstant.DEBUG)    Log.v(this.getClass().getSimpleName() + ">", "Link:" + text);
                                 link = text;
                                 break;
                             case "item":
-                                //   if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Item:" + name);
+                                //   if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Item:" + name);
                                 // addTextView(title);
 
                                 //Log.v(this.getClass().getSimpleName() + ">", headerTitle);
@@ -333,7 +332,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                             case "lastbuilddate":
 
-                                if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "build:" + text);
+                                if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "build:" + text);
                                 headerBuildDate = text;
                                 headerTitle = title;
                                 break;
@@ -344,7 +343,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                 headerCopyright = text;
                                 list_headers.add(headerTitle + LINE_SEPARATOR + headerCopyright);
 
-                                if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Header title:" + headerTitle);
+                                if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Header title:" + headerTitle);
                                 if (headerTitle.contains("365")) {
                                     c = Color.WHITE;
                                 } else if (headerTitle.toLowerCase().contains("fifa")) {
@@ -356,8 +355,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                 } else {
                                     c = Color.DKGRAY;
                                 }
-                                if (AppConfig.DEBUG)
-                                    if (AppConfig.DEBUG)  Log.v(this.getClass().getSimpleName() + ">", "Logging data" + headerTitle);
+                                if (AppConstant.DEBUG)
+                                    if (AppConstant.DEBUG)  Log.v(this.getClass().getSimpleName() + ">", "Logging data" + headerTitle);
                                 list_RssData.add(new RssData(headerTitle + LINE_SEPARATOR + headerCopyright, desc, link, headerTitle, c));
                                 break;
                             default:
@@ -376,11 +375,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Click!");
-        if (AppConfig.DEBUG)
+        if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Click!");
+        if (AppConstant.DEBUG)
             Log.v(this.getClass().getSimpleName() + ">", list_RssData.get(position).toString());
-        if (AppConfig.DEBUG)
-            if (AppConfig.DEBUG)   Log.v(this.getClass().getSimpleName() + ">", list_RssData.get(position).getLink());
+        if (AppConstant.DEBUG)
+            if (AppConstant.DEBUG)   Log.v(this.getClass().getSimpleName() + ">", list_RssData.get(position).getLink());
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(list_RssData.get(position).getLink()));
         startActivity(browserIntent);
     }

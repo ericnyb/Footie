@@ -1,9 +1,14 @@
 package com.ericbandiero.footie.rss;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
+import android.view.MenuItem;
 
+import com.ericbandiero.footie.AppConstant;
 import com.ericbandiero.footie.R;
+import com.ericbandiero.librarymain.UtilsShared;
 import com.ericbandiero.rssreader.SourceRSS;
 import com.ericbandiero.rssreader.activity.RSSAsynchActivity;
 
@@ -24,5 +29,20 @@ public class MainFootieActivity extends RSSAsynchActivity {
 		list_sources.add(new SourceRSS("http://www.espnfc.com/rss", "ESPN Soccer", ContextCompat.getColor(context, R.color.APP_COLOR_ESPN), null, defaultDaysBackToGo, "http://www.espnfc.us/"));
 		list_sources.add(new SourceRSS("http://www.espnfc.com/major-league-soccer/19/rss", "ESPN MSL", ContextCompat.getColor(context, R.color.APP_COLOR_ESPN_MLS), null, defaultDaysBackToGo, "http://www.espnfc.us/major-league-soccer/19/index"));
 		list_sources.add(new SourceRSS("https://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=soccer", "Fox Soccer", ContextCompat.getColor(context, R.color.APP_COLOR_FOX), null, defaultDaysBackToGo, "http://www.foxsports.com/soccer"));
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		if (AppConstant.DEBUG) Log.d(this.getClass().getSimpleName()+">","item..."+item.toString());
+		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public void onBackPressed() {
+		if (AppConstant.DEBUG) Log.d(this.getClass().getSimpleName()+">","Back pressed!");
+//		Intent intent = new Intent(Intent.ACTION_MAIN);
+//		intent.addCategory(Intent.CATEGORY_HOME);
+//		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//		startActivity(intent);
 	}
 }

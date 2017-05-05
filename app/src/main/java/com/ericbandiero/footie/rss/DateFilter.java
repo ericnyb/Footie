@@ -2,7 +2,7 @@ package com.ericbandiero.footie.rss;
 
 import android.util.Log;
 
-import com.ericbandiero.footie.AppConfig;
+import com.ericbandiero.footie.AppConstant;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -37,16 +37,16 @@ public class DateFilter implements IDateFilter {
                 long diff = mill1 - mill2;
 
                 int days = (int) (diff / (1000 * 60 * 60 * 24));
-                if (AppConfig.DEBUG)  Log.v(this.getClass().getSimpleName() + ">", pub_date);
-                if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Days:" + days);
+                if (AppConstant.DEBUG)  Log.v(this.getClass().getSimpleName() + ">", pub_date);
+                if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", "Days:" + days);
                 if (days <= days_old) {
-                    if (AppConfig.DEBUG) Log.v(this.getClass().getSimpleName() + ">", pub_date);
+                    if (AppConstant.DEBUG) Log.v(this.getClass().getSimpleName() + ">", pub_date);
 
                     return true;
                 }
 
             } catch (ParseException e) {
-                if (AppConfig.DEBUG) Log.i(this.getClass().getSimpleName()+">","Could not parse date:"+pub_date);
+                if (AppConstant.DEBUG) Log.i(this.getClass().getSimpleName()+">","Could not parse date:"+pub_date);
                 e.printStackTrace();
                 return true;
             }

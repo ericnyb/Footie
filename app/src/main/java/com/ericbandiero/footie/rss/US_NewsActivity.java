@@ -2,10 +2,6 @@ package com.ericbandiero.footie.rss;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
-
-import com.ericbandiero.footie.AppConfig;
-import com.ericbandiero.footie.BuildConfig;
 
 public class US_NewsActivity extends RSSAsychActivity {
 
