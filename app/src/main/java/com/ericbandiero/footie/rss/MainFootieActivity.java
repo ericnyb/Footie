@@ -20,7 +20,7 @@ public class MainFootieActivity extends RSSAsynchActivity {
 	public void loadRssSources() {
 		//Need to fix this.
 		prefFilterKeyNameRssSuffix="National";
-		list_sources.add(new SourceRSS("http://feeds.feedburner.com/soccernewsfeed", "Soccer news", ContextCompat.getColor(context, R.color.APP_COLOR_SOCCER_NEWS), null, defaultDaysBackToGo, "http://www.soccernews.com"));
+	//	list_sources.add(new SourceRSS("http://feeds.feedburner.com/soccernewsfeed", "Soccer news", ContextCompat.getColor(context, R.color.APP_COLOR_SOCCER_NEWS), null, defaultDaysBackToGo, "http://www.soccernews.com"));
 		list_sources.add(new SourceRSS("http://www.espnfc.com/rss", "ESPN Soccer", ContextCompat.getColor(context, R.color.APP_COLOR_ESPN), null, defaultDaysBackToGo, "http://www.espnfc.us/"));
 		list_sources.add(new SourceRSS("http://www.espnfc.com/major-league-soccer/19/rss", "ESPN MSL", ContextCompat.getColor(context, R.color.APP_COLOR_ESPN_MLS), null, defaultDaysBackToGo, "http://www.espnfc.us/major-league-soccer/19/index"));
 		list_sources.add(new SourceRSS("https://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=soccer", "Fox Soccer", ContextCompat.getColor(context, R.color.APP_COLOR_FOX), null, defaultDaysBackToGo, "http://www.foxsports.com/soccer"));
