@@ -18,6 +18,7 @@ public class MainFootieActivity extends RSSAsynchActivity {
 	Context context=this;
 	@Override
 	public void loadRssSources() {
+		//Need to fix this.
 		prefFilterKeyNameRssSuffix="National";
 		list_sources.add(new SourceRSS("http://feeds.feedburner.com/soccernewsfeed", "Soccer news", ContextCompat.getColor(context, R.color.APP_COLOR_SOCCER_NEWS), null, defaultDaysBackToGo, "http://www.soccernews.com"));
 		list_sources.add(new SourceRSS("http://www.espnfc.com/rss", "ESPN Soccer", ContextCompat.getColor(context, R.color.APP_COLOR_ESPN), null, defaultDaysBackToGo, "http://www.espnfc.us/"));
