@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ericbandiero.footie.rss.AussieActivity;
+import com.ericbandiero.footie.rss.MainFootieActivity;
 import com.ericbandiero.footie.rss.NY_News_Activity;
 import com.ericbandiero.footie.rss.RSSAsychActivity;
 
@@ -196,7 +197,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 intent = new Intent(this, AussieActivity.class);
                 break;
             case R.id.action_us_news:
-                intent = new Intent(this, RssMainActivity2.class);
+               // intent = new Intent(this, RssMainActivity2.class);
+                intent = new Intent(this, MainFootieActivity.class);
                 break;
 
             case R.id.action_ny_news:

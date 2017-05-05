@@ -13,4 +13,5 @@
     <string name="title_activity_us__news">US News</string>
     <string name="title_activity_ny__news_">NY News</string>
     <string name="title_activity_rss_main">RssMainActivity</string>
+    <string name="app_main_footie">Soccer News</string>
 </resources>

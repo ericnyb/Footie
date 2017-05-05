@@ -18,7 +18,7 @@ public class RssMainActivity2 extends RSSAsynchActivity{
 		if (AppConstant.DEBUG) Log.d(this.getClass().getSimpleName()+">","Here!");
 		super.onCreate(savedInstanceState);
 
-		//setContentView(R.layout.activity_rss_main_25);
+		setContentView(R.layout.activity_rss_main);
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 
