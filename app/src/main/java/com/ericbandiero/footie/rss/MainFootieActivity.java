@@ -8,6 +8,7 @@ import com.ericbandiero.rssreader.SourceRSS;
 import com.ericbandiero.rssreader.activity.RSSAsynchActivity;
 
 /**
+ * Simple subclass of our rss feed
  * Created by ${"Eric Bandiero"} on 5/5/2017.
  */
 
