@@ -8,6 +8,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.style.BackgroundColorSpan;
@@ -44,7 +45,7 @@ import java.util.concurrent.Executors;
  * Change 1 - where are we?
  * We made change after adding tag.
  */
-public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private XmlPullParserFactory xmlFactoryObject;
     public volatile boolean parsingComplete = true;
     private List<RssData> list_RssData = new ArrayList<>();

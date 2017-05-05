@@ -2,7 +2,8 @@
 <resources>
     <color name="APP_COLOR_ESPN">@color/Yellow</color>
     <color name="APP_COLOR_ESPN_MLS">@color/LightGreen</color>
-    <color name="APP_COLOR_FIFA">@color/LightSalmon</color>
+    <color name="APP_COLOR_FOX">@color/CadetBlue</color>
     <color name="APP_COLOR_365">@color/LightSkyBlue</color>
+    <color name="APP_COLOR_SOCCER_NEWS">@color/LightGrey</color>
 
 </resources>
