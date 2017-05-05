@@ -21,7 +21,7 @@ public class RssMainActivity2 extends RSSAsynchActivity{
 		setContentView(R.layout.activity_rss_main);
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
-
+		//We will stash this change
 		setTitle("Hello!");
 		ActionBar actionBar=getSupportActionBar();
 			if (AppConstant.DEBUG) Log.d(this.getClass().getSimpleName()+">",actionBar==null?"Actionbar is null":"Action is not null");
