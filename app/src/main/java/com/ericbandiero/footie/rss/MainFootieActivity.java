@@ -16,6 +16,7 @@ import com.ericbandiero.rssreader.activity.RSSAsynchActivity;
 
 /**
  * Simple subclass of our rss feed
+ * Made a change in development.
  * Created by ${"Eric Bandiero"} on 5/5/2017.
  */
 
@@ -46,7 +47,6 @@ public class MainFootieActivity extends RSSAsynchActivity {
 			@Override
 			public void execute(int i) {
 				if (i== AlertDialog.BUTTON_POSITIVE){
-					if (AppConstant.DEBUG) Log.d(this.getClass().getSimpleName()+">","Yup!");
 					finish();
 				}
 			}
