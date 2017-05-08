@@ -14,7 +14,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        >
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
@@ -69,7 +69,9 @@
 
         <activity
             android:name=".rss.MainFootieActivity"
-            android:label="@string/app_main_footie">
+            android:label="@string/app_main_footie"
+            android:theme="@style/NoActionBar"
+            >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -87,6 +89,6 @@
         android:name="android.support.PARENT_ACTIVITY"
         android:value="com.ericbandiero.footie.MainActivity"/>
   -->
-
+    <!--android:theme="@style/Theme.AppCompat.Light.DarkActionBar"-->
 
 </manifest>

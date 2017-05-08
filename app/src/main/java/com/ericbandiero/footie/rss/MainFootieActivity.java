@@ -3,8 +3,13 @@ package com.ericbandiero.footie.rss;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.ActionBar;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ericbandiero.footie.AppConstant;
@@ -24,6 +29,16 @@ public class MainFootieActivity extends RSSAsynchActivity {
 	int whichToRun=1;
 	int defaultDaysBackToGo = 30;
 	Context context=this;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		//We override oncreate to customize rss base toolbar.
+		Toolbar toolbar= (Toolbar) findViewById(R.id.rss_toolbar);
+		//toolbar.setTitleTextColor(ContextCompat.getColor(context,R.color.Blue));
+		//toolbar.setBackgroundColor(ContextCompat.getColor(context,R.color.Bisque));
+	}
+
 	@Override
 	public void loadRssSources() {
 		//Need to fix this.
