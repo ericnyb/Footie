@@ -32,6 +32,7 @@ public class MainFootieActivity extends RSSAsynchActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		fetchMessages=true;
 		super.onCreate(savedInstanceState);
 		//We override oncreate to customize rss base toolbar.
 		Toolbar toolbar= (Toolbar) findViewById(R.id.rss_toolbar);
