@@ -15,7 +15,7 @@ public class RssMainActivity2 extends RSSAsynchActivity{
 	int whichToRun=1;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		if (AppConstant.DEBUG) Log.d(this.getClass().getSimpleName()+">","Here!");
+		fetchMessages=true;
 		super.onCreate(savedInstanceState);
 		//We need to commit this so it doesn't show in other branch.
 		setContentView(R.layout.activity_rss_main);
