@@ -2,16 +2,8 @@
     <string name="app_name">All Footie</string>
 
     <string name="Feed_Header_Text">News Around the World!</string>
-    <string name="action_settings">Settings</string>
     <string name="action_search">Search</string>
-    <string name="title_activity_asych">Central Coast News</string>
-    <string name="action_asych">Central Coast</string>
-    <string name="title_activity_aussie">Aussie News</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_aussie">Aussie News</string>
-    <string name="title_activity_us__news">US News</string>
-    <string name="title_activity_ny__news_">NY News</string>
-    <string name="title_activity_rss_main">RssMainActivity</string>
     <string name="app_main_footie">Soccer News</string>
 </resources>

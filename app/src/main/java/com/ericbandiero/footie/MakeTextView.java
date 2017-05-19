@@ -1,13 +1,12 @@
 package com.ericbandiero.footie;
 
-import android.app.ActionBar;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.widget.ActionMenuView;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.widget.TextView;
 
-/**
+/** This isn't used - but keep for example.
  * Created by Eric on 3/27/2015.
  */
 public class MakeTextView {
